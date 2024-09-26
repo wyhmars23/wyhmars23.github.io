@@ -53,7 +53,7 @@
 
   <url>
     <loc>http://yoursite.com/child</loc>
-    <lastmod>2024-09-24</lastmod>
+    <lastmod>2024-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -61,7 +61,7 @@
   
   <url>
     <loc>http://yoursite.com/child/tags/Hexo-Theme-LiveMyLife/</loc>
-    <lastmod>2024-09-24</lastmod>
+    <lastmod>2024-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -70,7 +70,7 @@
   
   <url>
     <loc>http://yoursite.com/child/categories/Hexo-Theme-LiveMyLife/</loc>
-    <lastmod>2024-09-24</lastmod>
+    <lastmod>2024-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
