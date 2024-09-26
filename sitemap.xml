@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/child/undefined/github%E5%92%8Cgitee%E7%9A%84ssh%E9%85%8D%E7%BD%AE%E4%BB%A5%E5%8F%8A%E4%BB%93%E5%BA%93%E4%BD%BF%E7%94%A8%E7%9A%84git%E6%8C%87%E4%BB%A4/</loc>
+    
+    <lastmod>2024-09-26</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/child/tags/index.html</loc>
     
     <lastmod>2024-09-22</lastmod>
@@ -66,10 +73,24 @@
     <priority>0.6</priority>
   </url>
   
+  <url>
+    <loc>http://yoursite.com/child/tags/git/</loc>
+    <lastmod>2024-09-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
   
   <url>
     <loc>http://yoursite.com/child/categories/Hexo-Theme-LiveMyLife/</loc>
+    <lastmod>2024-09-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/child/categories/git/</loc>
     <lastmod>2024-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
