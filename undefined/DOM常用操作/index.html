@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-xxxxxx-xx');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="It&#39;s an IT blog..."/>
+  <meta name="keyword" content="v-vincen,v-vincen,livemylife,IT  blog,Blog"/>
+  <link rel="shortcut icon" href="/img/avatar/stars-logo-160x160.jpg"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css"/>
+    <link rel="stylesheet" href="/css/widget.css"/>
+    <link rel="stylesheet" href="/css/rocket.css"/>
+    <link rel="stylesheet" href="/css/signature.css"/>
+    <link rel="stylesheet" href="/css/catalog.css"/>
+    <link rel="stylesheet" href="/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://wyhmars23.github.io/undefined/DOM常用操作/">
+  <title>
+    
+      DOM操作 - Starrynight&#39;s blog
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--dark">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'dark';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'your-community/your-room'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Live your life</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+          
+          
+          
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: url('/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-page: url('//img/header_img/lml_bg.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/header_img/lml_bg.jpg');
+    }
+
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('/img/header_img/lml_bg.jpg'); */
+      
+    }
+
+    
+  </style>
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#javascript" title="javascript">javascript</a>
+              
+            </div>
+            <h1>DOM操作</h1>
+            <h2 class="subheading">常用的DOM操作</h2>
+            <span class="meta">
+              Posted by Starrynight on
+              2024-03-05
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">5</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">1.2k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <h1><strong>常用的 DOM 操作</strong></h1>
+<h3 id="1️⃣-选择-DOM-元素"><strong>1️⃣ 选择 DOM 元素</strong></h3>
+<h4 id="getElementById"><code>getElementById()</code></h4>
+<p>通过 <code>id</code> 选择一个元素。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> element = <span class="built_in">document</span>.getElementById(<span class="string">&quot;myElement&quot;</span>);</span><br></pre></td></tr></table></figure>
+<h4 id="getElementsByClassName"><code>getElementsByClassName()</code></h4>
+<p>通过类名选择一组元素。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> elements = <span class="built_in">document</span>.getElementsByClassName(<span class="string">&quot;myClass&quot;</span>);</span><br></pre></td></tr></table></figure>
+<h4 id="getElementsByTagName"><code>getElementsByTagName()</code></h4>
+<p>通过标签名选择一组元素。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> elements = <span class="built_in">document</span>.getElementsByTagName(<span class="string">&quot;div&quot;</span>);</span><br></pre></td></tr></table></figure>
+<h4 id="querySelector"><code>querySelector()</code></h4>
+<p>通过 CSS 选择器选择第一个匹配的元素。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> element = <span class="built_in">document</span>.querySelector(<span class="string">&quot;.myClass&quot;</span>); <span class="comment">// 选择第一个 .myClass 元素</span></span><br></pre></td></tr></table></figure>
+<h4 id="querySelectorAll"><code>querySelectorAll()</code></h4>
+<p>通过 CSS 选择器选择所有匹配的元素。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> elements = <span class="built_in">document</span>.querySelectorAll(<span class="string">&quot;.myClass&quot;</span>); <span class="comment">// 返回所有匹配 .myClass 的元素</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="2️⃣-修改-DOM-元素内容"><strong>2️⃣ 修改 DOM 元素内容</strong></h3>
+<h4 id="innerHTML"><code>innerHTML</code></h4>
+<p>修改或获取元素的 HTML 内容。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> element = <span class="built_in">document</span>.getElementById(<span class="string">&quot;myElement&quot;</span>);</span><br><span class="line">element.innerHTML = <span class="string">&quot;Hello, world!&quot;</span>; <span class="comment">// 设置 HTML 内容</span></span><br><span class="line"><span class="keyword">let</span> content = element.innerHTML; <span class="comment">// 获取 HTML 内容</span></span><br></pre></td></tr></table></figure>
+<h4 id="innerText"><code>innerText</code></h4>
+<p>修改或获取元素的文本内容（会忽略 HTML 标签）。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> element = <span class="built_in">document</span>.getElementById(<span class="string">&quot;myElement&quot;</span>);</span><br><span class="line">element.innerText = <span class="string">&quot;Hello, world!&quot;</span>; <span class="comment">// 设置文本内容</span></span><br><span class="line"><span class="keyword">let</span> text = element.innerText; <span class="comment">// 获取文本内容</span></span><br></pre></td></tr></table></figure>
+<h4 id="textContent"><code>textContent</code></h4>
+<p>与 <code>innerText</code> 类似，但不考虑样式和 HTML 标签的影响。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> element = <span class="built_in">document</span>.getElementById(<span class="string">&quot;myElement&quot;</span>);</span><br><span class="line">element.textContent = <span class="string">&quot;Hello, world!&quot;</span>; <span class="comment">// 设置文本内容</span></span><br><span class="line"><span class="keyword">let</span> text = element.textContent; <span class="comment">// 获取文本内容</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="3️⃣-修改-DOM-元素属性"><strong>3️⃣ 修改 DOM 元素属性</strong></h3>
+<h4 id="setAttribute"><code>setAttribute()</code></h4>
+<p>设置元素的属性。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> element = <span class="built_in">document</span>.getElementById(<span class="string">&quot;myElement&quot;</span>);</span><br><span class="line">element.setAttribute(<span class="string">&quot;src&quot;</span>, <span class="string">&quot;image.jpg&quot;</span>); <span class="comment">// 设置 img 元素的 src 属性</span></span><br></pre></td></tr></table></figure>
+<h4 id="getAttribute"><code>getAttribute()</code></h4>
+<p>获取元素的属性。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> element = <span class="built_in">document</span>.getElementById(<span class="string">&quot;myElement&quot;</span>);</span><br><span class="line"><span class="keyword">let</span> src = element.getAttribute(<span class="string">&quot;src&quot;</span>); <span class="comment">// 获取 src 属性</span></span><br></pre></td></tr></table></figure>
+<h4 id="removeAttribute"><code>removeAttribute()</code></h4>
+<p>删除元素的属性。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> element = <span class="built_in">document</span>.getElementById(<span class="string">&quot;myElement&quot;</span>);</span><br><span class="line">element.removeAttribute(<span class="string">&quot;src&quot;</span>); <span class="comment">// 删除 src 属性</span></span><br></pre></td></tr></table></figure>
+<h4 id="classList-add-classList-remove-classList-toggle"><code>classList.add()</code>, <code>classList.remove()</code>, <code>classList.toggle()</code></h4>
+<p>操作元素的类名。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> element = <span class="built_in">document</span>.getElementById(<span class="string">&quot;myElement&quot;</span>);</span><br><span class="line">element.classList.add(<span class="string">&quot;active&quot;</span>); <span class="comment">// 添加 class</span></span><br><span class="line">element.classList.remove(<span class="string">&quot;active&quot;</span>); <span class="comment">// 移除 class</span></span><br><span class="line">element.classList.toggle(<span class="string">&quot;active&quot;</span>); <span class="comment">// 如果有则移除，如果没有则添加 class</span></span><br></pre></td></tr></table></figure>
+<h4 id="style（内联样式）"><code>style</code>（内联样式）</h4>
+<p>设置或获取元素的内联样式。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> element = <span class="built_in">document</span>.getElementById(<span class="string">&quot;myElement&quot;</span>);</span><br><span class="line">element.style.color = <span class="string">&quot;red&quot;</span>; <span class="comment">// 设置颜色为红色</span></span><br><span class="line"><span class="keyword">let</span> color = element.style.color; <span class="comment">// 获取颜色值</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="4️⃣-创建和插入新的-DOM-元素"><strong>4️⃣ 创建和插入新的 DOM 元素</strong></h3>
+<h4 id="createElement"><code>createElement()</code></h4>
+<p>创建一个新的 HTML 元素。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> newDiv = <span class="built_in">document</span>.createElement(<span class="string">&quot;div&quot;</span>);</span><br><span class="line">newDiv.innerText = <span class="string">&quot;Hello, World!&quot;</span>;</span><br></pre></td></tr></table></figure>
+<h4 id="appendChild"><code>appendChild()</code></h4>
+<p>将一个新元素添加到父元素的子元素列表末尾。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> parent = <span class="built_in">document</span>.getElementById(<span class="string">&quot;parent&quot;</span>);</span><br><span class="line"><span class="keyword">let</span> newDiv = <span class="built_in">document</span>.createElement(<span class="string">&quot;div&quot;</span>);</span><br><span class="line">newDiv.innerText = <span class="string">&quot;New child element&quot;</span>;</span><br><span class="line">parent.appendChild(newDiv); <span class="comment">// 将新元素添加到 parent 元素下</span></span><br></pre></td></tr></table></figure>
+<h4 id="insertBefore"><code>insertBefore()</code></h4>
+<p>将一个新元素插入到另一个元素之前。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> parent = <span class="built_in">document</span>.getElementById(<span class="string">&quot;parent&quot;</span>);</span><br><span class="line"><span class="keyword">let</span> newDiv = <span class="built_in">document</span>.createElement(<span class="string">&quot;div&quot;</span>);</span><br><span class="line"><span class="keyword">let</span> referenceNode = <span class="built_in">document</span>.getElementById(<span class="string">&quot;reference&quot;</span>);</span><br><span class="line">parent.insertBefore(newDiv, referenceNode); <span class="comment">// 将 newDiv 插入到 referenceNode 前</span></span><br></pre></td></tr></table></figure>
+<h4 id="insertAdjacentHTML"><code>insertAdjacentHTML()</code></h4>
+<p>将 HTML 插入到指定的位置。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> element = <span class="built_in">document</span>.getElementById(<span class="string">&quot;myElement&quot;</span>);</span><br><span class="line">element.insertAdjacentHTML(<span class="string">&quot;beforeend&quot;</span>, <span class="string">&quot;&lt;p&gt;New paragraph&lt;/p&gt;&quot;</span>); <span class="comment">// 在元素末尾插入新段落</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="5️⃣-删除-DOM-元素"><strong>5️⃣ 删除 DOM 元素</strong></h3>
+<h4 id="removeChild"><code>removeChild()</code></h4>
+<p>删除指定的子元素。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> parent = <span class="built_in">document</span>.getElementById(<span class="string">&quot;parent&quot;</span>);</span><br><span class="line"><span class="keyword">let</span> child = <span class="built_in">document</span>.getElementById(<span class="string">&quot;child&quot;</span>);</span><br><span class="line">parent.removeChild(child); <span class="comment">// 从 parent 元素中删除 child 元素</span></span><br></pre></td></tr></table></figure>
+<h4 id="remove"><code>remove()</code></h4>
+<p>直接删除元素本身。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> element = <span class="built_in">document</span>.getElementById(<span class="string">&quot;myElement&quot;</span>);</span><br><span class="line">element.remove(); <span class="comment">// 删除当前元素</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="6️⃣-事件操作"><strong>6️⃣ 事件操作</strong></h3>
+<h4 id="addEventListener"><code>addEventListener()</code></h4>
+<p>为元素添加事件监听器。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> button = <span class="built_in">document</span>.getElementById(<span class="string">&quot;myButton&quot;</span>);</span><br><span class="line">button.addEventListener(<span class="string">&quot;click&quot;</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    alert(<span class="string">&quot;Button clicked!&quot;</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h4 id="removeEventListener"><code>removeEventListener()</code></h4>
+<p>移除事件监听器。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> button = <span class="built_in">document</span>.getElementById(<span class="string">&quot;myButton&quot;</span>);</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">handleClick</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    alert(<span class="string">&quot;Button clicked!&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line">button.addEventListener(<span class="string">&quot;click&quot;</span>, handleClick);</span><br><span class="line">button.removeEventListener(<span class="string">&quot;click&quot;</span>, handleClick);</span><br></pre></td></tr></table></figure>
+<h4 id="dispatchEvent"><code>dispatchEvent()</code></h4>
+<p>触发一个自定义事件。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> event = <span class="keyword">new</span> Event(<span class="string">&quot;myEvent&quot;</span>);</span><br><span class="line"><span class="keyword">let</span> element = <span class="built_in">document</span>.getElementById(<span class="string">&quot;myElement&quot;</span>);</span><br><span class="line">element.dispatchEvent(event); <span class="comment">// 触发自定义事件</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="7️⃣-滚动和视图相关操作"><strong>7️⃣ 滚动和视图相关操作</strong></h3>
+<h4 id="scrollTop"><code>scrollTop</code></h4>
+<p>获取或设置元素的垂直滚动位置。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> element = <span class="built_in">document</span>.getElementById(<span class="string">&quot;myElement&quot;</span>);</span><br><span class="line"><span class="keyword">let</span> scrollPos = element.scrollTop; <span class="comment">// 获取滚动位置</span></span><br><span class="line">element.scrollTop = <span class="number">100</span>; <span class="comment">// 设置滚动位置为 100px</span></span><br></pre></td></tr></table></figure>
+<h4 id="scrollIntoView"><code>scrollIntoView()</code></h4>
+<p>使元素滚动到视口中可见的位置。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> element = <span class="built_in">document</span>.getElementById(<span class="string">&quot;myElement&quot;</span>);</span><br><span class="line">element.scrollIntoView(); <span class="comment">// 滚动到该元素的位置</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="8️⃣-获取元素尺寸与位置"><strong>8️⃣ 获取元素尺寸与位置</strong></h3>
+<h4 id="getBoundingClientRect"><code>getBoundingClientRect()</code></h4>
+<p>返回元素的大小和位置（相对于视口）。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> element = <span class="built_in">document</span>.getElementById(<span class="string">&quot;myElement&quot;</span>);</span><br><span class="line"><span class="keyword">let</span> rect = element.getBoundingClientRect();</span><br><span class="line"><span class="built_in">console</span>.log(rect.top, rect.left, rect.width, rect.height);</span><br></pre></td></tr></table></figure>
+<h4 id="clientWidth-和-clientHeight"><code>clientWidth</code> 和 <code>clientHeight</code></h4>
+<p>获取元素的可视区域的宽度和高度（不包括滚动条）。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> element = <span class="built_in">document</span>.getElementById(<span class="string">&quot;myElement&quot;</span>);</span><br><span class="line"><span class="keyword">let</span> width = element.clientWidth;</span><br><span class="line"><span class="keyword">let</span> height = element.clientHeight;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="9️⃣-文档相关操作"><strong>9️⃣ 文档相关操作</strong></h3>
+<h4 id="document-createElement"><code>document.createElement()</code></h4>
+<p>创建一个新的 DOM 元素。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> newElement = <span class="built_in">document</span>.createElement(<span class="string">&quot;div&quot;</span>);</span><br><span class="line">newElement.innerText = <span class="string">&quot;Hello!&quot;</span>;</span><br><span class="line"><span class="built_in">document</span>.body.appendChild(newElement);</span><br></pre></td></tr></table></figure>
+<h4 id="document-querySelector"><code>document.querySelector()</code></h4>
+<p>选择文档中第一个匹配的元素。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> element = <span class="built_in">document</span>.querySelector(<span class="string">&quot;.myClass&quot;</span>);</span><br></pre></td></tr></table></figure>
+<h4 id="document-querySelectorAll"><code>document.querySelectorAll()</code></h4>
+<p>选择文档中所有匹配的元素，返回一个 NodeList。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> elements = <span class="built_in">document</span>.querySelectorAll(<span class="string">&quot;.myClass&quot;</span>);</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="0️⃣-动画与过渡"><strong>0️⃣ 动画与过渡</strong></h3>
+<h4 id="requestAnimationFrame"><code>requestAnimationFrame()</code></h4>
+<p>调用一个函数来执行动画，通常用于创建平滑的动画效果。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">animate</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 动画逻辑</span></span><br><span class="line">    requestAnimationFrame(animate); <span class="comment">// 继续执行下一个动画帧</span></span><br><span class="line">&#125;</span><br><span class="line">requestAnimationFrame(animate);</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="总结"><strong>总结</strong></h2>
+<p>这些 DOM 操作可以帮助你动态地操作页面内容和结构，增加页面的交互性。常见操作包括选择元素、修改元素的属性或内容、添加或删除子元素、处理事件、获取元素位置、创建动画效果等。</p>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/undefined/Js数组与对象的常用方法/" data-toggle="tooltip" data-placement="top" title="Js数组与对象的常用方法">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/undefined/transition用法/" data-toggle="tooltip" data-placement="top" title="transition用法">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      如果您喜欢此博客或发现它对您有用，则欢迎对此发表评论。 也欢迎您共享此博客，以便更多人可以参与。 如果博客中使用的图像侵犯了您的版权，请与作者联系以将其删除。 谢谢 ！
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=DOM操作&body=Hi,I found this website and thought you might like it https://wyhmars23.github.io/undefined/DOM常用操作/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">常用的 DOM 操作</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1%EF%B8%8F%E2%83%A3-%E9%80%89%E6%8B%A9-DOM-%E5%85%83%E7%B4%A0"><span class="toc-nav-number">1.0.1.</span> <span class="toc-nav-text">1️⃣ 选择 DOM 元素</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#getElementById"><span class="toc-nav-number">1.0.1.1.</span> <span class="toc-nav-text">getElementById()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#getElementsByClassName"><span class="toc-nav-number">1.0.1.2.</span> <span class="toc-nav-text">getElementsByClassName()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#getElementsByTagName"><span class="toc-nav-number">1.0.1.3.</span> <span class="toc-nav-text">getElementsByTagName()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#querySelector"><span class="toc-nav-number">1.0.1.4.</span> <span class="toc-nav-text">querySelector()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#querySelectorAll"><span class="toc-nav-number">1.0.1.5.</span> <span class="toc-nav-text">querySelectorAll()</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2%EF%B8%8F%E2%83%A3-%E4%BF%AE%E6%94%B9-DOM-%E5%85%83%E7%B4%A0%E5%86%85%E5%AE%B9"><span class="toc-nav-number">1.0.2.</span> <span class="toc-nav-text">2️⃣ 修改 DOM 元素内容</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#innerHTML"><span class="toc-nav-number">1.0.2.1.</span> <span class="toc-nav-text">innerHTML</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#innerText"><span class="toc-nav-number">1.0.2.2.</span> <span class="toc-nav-text">innerText</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#textContent"><span class="toc-nav-number">1.0.2.3.</span> <span class="toc-nav-text">textContent</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3%EF%B8%8F%E2%83%A3-%E4%BF%AE%E6%94%B9-DOM-%E5%85%83%E7%B4%A0%E5%B1%9E%E6%80%A7"><span class="toc-nav-number">1.0.3.</span> <span class="toc-nav-text">3️⃣ 修改 DOM 元素属性</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#setAttribute"><span class="toc-nav-number">1.0.3.1.</span> <span class="toc-nav-text">setAttribute()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#getAttribute"><span class="toc-nav-number">1.0.3.2.</span> <span class="toc-nav-text">getAttribute()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#removeAttribute"><span class="toc-nav-number">1.0.3.3.</span> <span class="toc-nav-text">removeAttribute()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#classList-add-classList-remove-classList-toggle"><span class="toc-nav-number">1.0.3.4.</span> <span class="toc-nav-text">classList.add(), classList.remove(), classList.toggle()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#style%EF%BC%88%E5%86%85%E8%81%94%E6%A0%B7%E5%BC%8F%EF%BC%89"><span class="toc-nav-number">1.0.3.5.</span> <span class="toc-nav-text">style（内联样式）</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4%EF%B8%8F%E2%83%A3-%E5%88%9B%E5%BB%BA%E5%92%8C%E6%8F%92%E5%85%A5%E6%96%B0%E7%9A%84-DOM-%E5%85%83%E7%B4%A0"><span class="toc-nav-number">1.0.4.</span> <span class="toc-nav-text">4️⃣ 创建和插入新的 DOM 元素</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#createElement"><span class="toc-nav-number">1.0.4.1.</span> <span class="toc-nav-text">createElement()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#appendChild"><span class="toc-nav-number">1.0.4.2.</span> <span class="toc-nav-text">appendChild()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#insertBefore"><span class="toc-nav-number">1.0.4.3.</span> <span class="toc-nav-text">insertBefore()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#insertAdjacentHTML"><span class="toc-nav-number">1.0.4.4.</span> <span class="toc-nav-text">insertAdjacentHTML()</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5%EF%B8%8F%E2%83%A3-%E5%88%A0%E9%99%A4-DOM-%E5%85%83%E7%B4%A0"><span class="toc-nav-number">1.0.5.</span> <span class="toc-nav-text">5️⃣ 删除 DOM 元素</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#removeChild"><span class="toc-nav-number">1.0.5.1.</span> <span class="toc-nav-text">removeChild()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#remove"><span class="toc-nav-number">1.0.5.2.</span> <span class="toc-nav-text">remove()</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#6%EF%B8%8F%E2%83%A3-%E4%BA%8B%E4%BB%B6%E6%93%8D%E4%BD%9C"><span class="toc-nav-number">1.0.6.</span> <span class="toc-nav-text">6️⃣ 事件操作</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#addEventListener"><span class="toc-nav-number">1.0.6.1.</span> <span class="toc-nav-text">addEventListener()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#removeEventListener"><span class="toc-nav-number">1.0.6.2.</span> <span class="toc-nav-text">removeEventListener()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#dispatchEvent"><span class="toc-nav-number">1.0.6.3.</span> <span class="toc-nav-text">dispatchEvent()</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#7%EF%B8%8F%E2%83%A3-%E6%BB%9A%E5%8A%A8%E5%92%8C%E8%A7%86%E5%9B%BE%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C"><span class="toc-nav-number">1.0.7.</span> <span class="toc-nav-text">7️⃣ 滚动和视图相关操作</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#scrollTop"><span class="toc-nav-number">1.0.7.1.</span> <span class="toc-nav-text">scrollTop</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#scrollIntoView"><span class="toc-nav-number">1.0.7.2.</span> <span class="toc-nav-text">scrollIntoView()</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#8%EF%B8%8F%E2%83%A3-%E8%8E%B7%E5%8F%96%E5%85%83%E7%B4%A0%E5%B0%BA%E5%AF%B8%E4%B8%8E%E4%BD%8D%E7%BD%AE"><span class="toc-nav-number">1.0.8.</span> <span class="toc-nav-text">8️⃣ 获取元素尺寸与位置</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#getBoundingClientRect"><span class="toc-nav-number">1.0.8.1.</span> <span class="toc-nav-text">getBoundingClientRect()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#clientWidth-%E5%92%8C-clientHeight"><span class="toc-nav-number">1.0.8.2.</span> <span class="toc-nav-text">clientWidth 和 clientHeight</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#9%EF%B8%8F%E2%83%A3-%E6%96%87%E6%A1%A3%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C"><span class="toc-nav-number">1.0.9.</span> <span class="toc-nav-text">9️⃣ 文档相关操作</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#document-createElement"><span class="toc-nav-number">1.0.9.1.</span> <span class="toc-nav-text">document.createElement()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#document-querySelector"><span class="toc-nav-number">1.0.9.2.</span> <span class="toc-nav-text">document.querySelector()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#document-querySelectorAll"><span class="toc-nav-number">1.0.9.3.</span> <span class="toc-nav-text">document.querySelectorAll()</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#0%EF%B8%8F%E2%83%A3-%E5%8A%A8%E7%94%BB%E4%B8%8E%E8%BF%87%E6%B8%A1"><span class="toc-nav-number">1.0.10.</span> <span class="toc-nav-text">0️⃣ 动画与过渡</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#requestAnimationFrame"><span class="toc-nav-number">1.0.10.1.</span> <span class="toc-nav-text">requestAnimationFrame()</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">总结</span></a></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#javascript" title="javascript">javascript</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>链友</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="https://v-vincen.life/" target="_blank">V_Vincen</a>
+          </li>
+          
+          <li>
+            <a href="https://hexo.io/" target="_blank">Hexo</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/wyhmars23">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://twitter.com/V_Vincen_">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.instagram.com/v_vincen_">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="http://weibo.com/WVincen">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          Starrynight
+          2025
+          <br>
+          Theme by
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a target="_blank" rel="noopener" href="https://v-vincen.life/">Live My Life</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="/js/jquery.min.js"></script>
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="/js/hux-blog.min.js"></script>
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="/js/catalog.js"></script>
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+    <!-- LangSelect start -->
+    <script type="text/javascript" src="/js/langselect.js"></script>
+    <!-- LangSelect end -->
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="/js/mouseclick.js" content='The first step is as good as half over...,Laugh and grow fat...,Man proposes God disposes...,When all else is lost the future still remains...,Wasting time is robbing oneself...,Sharp tools make good work...,Cease to struggle and you cease to live...,A friend in need is a friend indeed...,Faith can move mountains...' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033'></script>
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://wyhmars23.github.io/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	</body>
+</html>
